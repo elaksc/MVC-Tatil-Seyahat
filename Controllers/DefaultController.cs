@@ -15,6 +15,7 @@ namespace TraversalTrimProject.Controllers
         }
         public ActionResult About()
         {
+
             return View();
         }
     }
