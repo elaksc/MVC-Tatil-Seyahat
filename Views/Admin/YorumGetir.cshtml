@@ -1,0 +1,31 @@
+﻿@model TraversalTrimProject.Models.Siniflar.Yorumlar
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Blog Güncelleme </h2>
+<br />
+@using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+{
+    <br />
+    <form class="form-group" method="post">
+        @Html.LabelFor(x => x.Id)
+        @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.LabelFor(x => x.KullaniciAdi)
+        @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Mail)
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Yorum)
+        @Html.TextBoxFor(x => x.Yorum, new { @class = "form-control" })
+       
+        <br />
+        <button class="btn btn-success">Yorum Güncelle</button>
+    </form>
+}
+
+
+

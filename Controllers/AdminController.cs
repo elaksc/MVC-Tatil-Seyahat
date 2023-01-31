@@ -10,6 +10,7 @@ namespace TraversalTrimProject.Controllers
     {
         // GET: Admin
         Context c = new Context();
+        [Authorize]
         public ActionResult Index()
         {
             var degerler = c.Blogs.ToList();
@@ -48,6 +49,32 @@ namespace TraversalTrimProject.Controllers
             blg.Tarih = b.Tarih;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult YorumListesi()
+        {
+            var yorumlar = c.Yorumlars.ToList();
+            return View(yorumlar);
+        }
+        public ActionResult YorumSil(int id)
+        {
+            var y = c.Yorumlars.Find(id);
+            c.Yorumlars.Remove(y);
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
+        public ActionResult YorumGetir(int id)
+        {
+            var yl = c.Yorumlars.Find(id);
+            return View("YorumGetir", yl);
+        }
+        public ActionResult YorumGuncelle(Yorumlar y)
+        {
+            var yrm = c.Yorumlars.Find(y.Id);
+            yrm.KullaniciAdi = y.KullaniciAdi;
+            yrm.Mail = y.Mail;
+            yrm.Yorum = y.Yorum;
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
         }
     }
 }
