@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TraversalTrimProject.Models.Sınıflar.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<TraversalTrimProject.Models.Siniflar.Context>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(TraversalTrimProject.Models.Sınıflar.Context context)
+        protected override void Seed(TraversalTrimProject.Models.Siniflar.Context context)
         {
             //  This method will be called after migrating to the latest version.
 

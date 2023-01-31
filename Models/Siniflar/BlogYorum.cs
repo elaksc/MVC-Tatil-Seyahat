@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TraversalTrimProject.Models.Sınıflar;
+using TraversalTrimProject.Models.Siniflar;
 
 namespace TraversalTrimProject.Models.Siniflar
 {

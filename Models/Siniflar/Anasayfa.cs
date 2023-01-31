@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace TraversalTrimProject.Models.Sınıflar
+namespace TraversalTrimProject.Models.Siniflar
 {
     public class Anasayfa
     {
