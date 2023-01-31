@@ -22,9 +22,9 @@ namespace TraversalTrimProject.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(Admin a)
+        public ActionResult Login(Admin ad)
         {
-            var bilgiler = c.Admins.FirstOrDefault(x => x.KullaniciAdi == a.KullaniciAdi && x.Sifre == a.Sifre);
+            var bilgiler = c.Admins.FirstOrDefault(x => x.KullaniciAdi == ad.KullaniciAdi && x.Sifre == ad.Sifre);
             if (bilgiler != null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.KullaniciAdi, false);
